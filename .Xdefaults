@@ -64,6 +64,7 @@ URxvt.cursorUnderline:      false
 
 ! Pointer
 URxvt.pointerBlank:         true
+URxvt.iso14755: False
 
 !!Source http://github.com/altercation/solarized
 
