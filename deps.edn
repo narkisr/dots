@@ -1,0 +1,12 @@
+{
+   :aliases {
+    :repl {
+      :extra-deps {com.bhauman/rebel-readline {:mvn/version "RELEASE"}
+                   io.aviso/pretty {:mvn/version "RELEASE"}
+                   mvxcvi/puget {:mvn/version "RELEASE"}
+                   org.clojure/clojure {:mvn/version "RELEASE"}
+                   clj-commons/pomegranate {:mvn/version "RELEASE"}}
+            :main-opts  ["-m" "rebel-readline.main"]
+    }
+  }
+}
