@@ -1,9 +1,9 @@
 {
   :user {
     :plugins [
-       [mvxcvi/whidbey "2.2.0"]
+       [mvxcvi/whidbey "2.2.1"]
        [io.aviso/pretty "0.1.37"]
-       [cider/cider-nrepl "0.22.4"]]
+       [cider/cider-nrepl "0.25.9"]]
 
     :middleware [
         cider-nrepl.plugin/middleware
