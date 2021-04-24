@@ -1,6 +1,11 @@
 /*
- * set toolkit.legacyUserProfileCustomizations.stylesheets to true in about:config
- * see https://gist.github.com/BenoitAverty/af633ee20e27f48f9ba7178451432206 for more details
+ * Set toolkit.legacyUserProfileCustomizations.stylesheets to true in about:config
+ */
+
+
+/**
+ * Tabs off when only one tab is used:
+ *    https://gist.github.com/BenoitAverty/af633ee20e27f48f9ba7178451432206 for more details
  */
 :root {
     --hidetabs-tab-min-height: 33px;
@@ -33,4 +38,26 @@
    adjacent to new tab button) */
 #tabbrowser-tabs tab[first-visible-tab="true"] + #tabs-newtab-button {
     visibility: collapse;
+}
+
+/**
+ * Autohide url bar:
+ *    See https://support.mozilla.org/en-US/questions/1284841
+ */
+#navigator-toolbox {
+  max-height: 2px;
+  overflow: hidden;
+  transition: ease all 5s;
+}
+
+#navigator-toolbox:hover {
+  max-height: 100vh;
+  animation: 0s pop-in;
+  animation-fill-mode: both;
+  animation-delay: 5s;
+}
+
+@keyframes pop-in {
+  from {overflow: hidden}
+  to {overflow: unset}
 }
