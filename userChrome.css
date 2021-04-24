@@ -1,0 +1,36 @@
+/*
+ * set toolkit.legacyUserProfileCustomizations.stylesheets to true in about:config
+ * see https://gist.github.com/BenoitAverty/af633ee20e27f48f9ba7178451432206 for more details
+ */
+:root {
+    --hidetabs-tab-min-height: 33px;
+}
+
+:root[uidensity=compact] {
+    --hidetabs-tab-min-height: 29px;
+}
+
+:root[uidensity=touch] {
+    --hidetabs-tab-min-height: 41px;
+}
+
+/* Set --tab-min-height to 0px so tab bar can disappear */
+#tabbrowser-tabs {
+    --tab-min-height: 0px;
+}
+
+/* Restore minimum height when more than one tab */
+#tabbrowser-tabs tab {
+    min-height: var(--hidetabs-tab-min-height);
+}
+
+/* Collapse tab bar when there is only one tab (tab is both first & last) */
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] {
+    visibility: collapse;
+}
+
+/* Hide the New Tab button when there is only one tab (first visible tab is
+   adjacent to new tab button) */
+#tabbrowser-tabs tab[first-visible-tab="true"] + #tabs-newtab-button {
+    visibility: collapse;
+}
