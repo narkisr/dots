@@ -47,14 +47,14 @@
 #navigator-toolbox {
   max-height: 2px;
   overflow: hidden;
-  transition: ease all 5s;
+  transition: ease all 15s;
 }
 
 #navigator-toolbox:hover {
   max-height: 100vh;
   animation: 0s pop-in;
   animation-fill-mode: both;
-  animation-delay: 5s;
+  animation-delay: 15s;
 }
 
 @keyframes pop-in {
