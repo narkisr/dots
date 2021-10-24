@@ -2,17 +2,18 @@
   :user {
     :plugins [
        [mvxcvi/whidbey "2.2.1"]
-       [io.aviso/pretty "0.1.37"]
-       [cider/cider-nrepl "0.25.9"]]
+       [io.aviso/pretty "1.1"]
+       [cider/cider-nrepl "0.26.0"]]
 
     :middleware [
-        cider-nrepl.plugin/middleware
-        io.aviso.lein-pretty/inject
-        whidbey.plugin/repl-pprint]
+         cider-nrepl.plugin/middleware
+         io.aviso.lein-pretty/inject
+         whidbey.plugin/repl-pprint
+        ]
 
     :source-paths  ["dev" "test"]
 
-    :dependencies [[io.aviso/pretty "0.1.37"]]
+    :dependencies [[io.aviso/pretty "1.1"]]
 
     :whidbey {
       :witdh 180
@@ -35,9 +36,3 @@
     }
   }
 }
-
-
-
-
-
-
